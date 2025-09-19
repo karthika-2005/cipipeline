@@ -35,7 +35,7 @@ pipeline {
     post {
         success {
             // Trigger CD pipeline automatically if CI is successful
-            build job: 'CD-Pipeline', wait: false
+            build job: 'cdpipeline', wait: false
         }
         always {
             echo 'CI Pipeline finished!'
