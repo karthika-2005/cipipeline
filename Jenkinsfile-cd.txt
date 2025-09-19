@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/viji-sarvesh/ciexpipeline.git'
+                git branch: 'main', url: 'https://github.com/karthika-2005/cipipeline.git'
             }
         }
 
         stage('Download Artifact from CI') {
             steps {
                 copyArtifacts(
-                    projectName: 'CIPipeline',   // name of your CI job
+                    projectName: 'cipipeline',   // name of your CI job
                     selector: lastSuccessful()
                 )
             }
